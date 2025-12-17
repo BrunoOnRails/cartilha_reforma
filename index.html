@@ -10,17 +10,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        @media print {
-          section, div {
-            page-break-inside: avoid;
-          }
-        }
-        
-        @page {
-            size: A4;
-            margin: 0;
-        }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -241,6 +230,60 @@
         tr:nth-child(even) {
             background: #f8f9fa;
         }
+    
+        /* print overrides */
+        @media print {
+
+            .section-tributacao .steps { margin: 8px 0; }
+            .section-tributacao .step {
+                padding: 8px 10px;
+                margin-bottom: 8px;
+            }
+            .section-tributacao .step-number {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9em;
+            }
+            .section-tributacao .step-content strong { font-size: 0.95em; }
+            .section-tributacao .step-content p { font-size: 0.85em; line-height: 1.4; }
+
+            .section-cadastro {
+                break-before: page;
+                page-break-before: always;
+                margin-top: 12mm;
+            }
+
+            .page-3-start {
+                break-before: page !important;
+                page-break-before: always !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-top: 12mm;
+            }
+            @page { size: A4; margin: 10mm; }
+            body { background: white; }
+            .header { padding: 20px 20px; }
+            .logo { width: 220px; }
+            .header h1 { font-size: 1.6em; }
+            .header p { font-size: 1em; }
+            .content { padding: 20px 40px; }
+            .section,
+            .destaque,
+            .step,
+            .alert,
+            .exemplo {
+                margin-bottom: 12px;
+            }
+            .section,
+            .destaque,
+            .step {
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+            .step:hover { transform: none; }
+            .screenshot { box-shadow: none; }
+        }
+
     </style>
 </head>
 <body>
@@ -281,7 +324,7 @@
                 </ul>
             </div>
 
-            <div class="section">
+            <div class="section section-tributacao">
                 <h2>Como o Sistema Define a Tributação?</h2>
                 <p>O sistema utiliza uma <strong>ordem de prioridade</strong> inteligente para preencher as informações da reforma nas notas fiscais:</p>
                 
@@ -312,12 +355,12 @@
                 </div>
             </div>
 
-            <div class="section">
+            <div class="section section-cadastro">
                 <h2>Alterando o Cadastro dos Materiais</h2>
                 <p>Para produtos que <strong>não são tributados integralmente</strong> (como Isentos ou Alíquota Reduzida), você deve ajustar o cadastro manualmente.</p>
                 
                 <p>Veja abaixo a tela de cadastro:</p>
-                <img src="https://i.imgur.com/39wfv1m.png" alt="Tela de Cadastro de Materiais" class="screenshot" style="width: 910px !important; max-width: 910px !important; display: block; margin: 15px auto;">
+                <img src="https://i.imgur.com/39wfv1m.png" alt="Tela de Cadastro de Materiais" class="screenshot" style="width: 900px !important; max-width: 900px !important; display: block; margin: 15px auto;">
 
                 <div class="steps">
                     <div class="step">
@@ -340,7 +383,7 @@
                         <div class="step-number">3</div>
                         <div class="step-content">
                             <strong>Buscar CST/CClassTrib</strong>
-                            <p>Ao clicar na <strong>lupa</strong>, o sistema abrirá a lista completa de situações tributárias disponíveis.</p>
+                            <p>Ao clicar na lupa, o sistema abrirá a lista completa de situações tributárias disponíveis.</p>
                         </div>
                     </div>
                     
@@ -348,20 +391,22 @@
                         <div class="step-number">4</div>
                         <div class="step-content">
                             <strong>Preenchimento Manual</strong>
-                            <p>Você também pode digitar os dados diretamente no campo. O sistema validará automaticamente se o código informado existe. Caso o campo esteja vazio e você pressione <strong>Enter</strong> ou <strong>Tab</strong>, o sistema abrirá a mesma tela de busca do item 3.</p>
+                            <p>Você também pode digitar os dados diretamente no campo. O sistema validará automaticamente se o código informado existe. Caso o campo esteja vazio e você pressione Enter ou Tab, o sistema abrirá a mesma tela de busca do item 3.</p>
                         </div>
                     </div>
                 </div>
 
+                <div class="page-3-start">
                 <p>Ao clicar na lupa (item 3), você verá a tela abaixo. Basta localizar a situação desejada e dar dois cliques (ou pressionar Enter):</p>
-                <img src="https://i.imgur.com/BNmK86g.png" alt="Tela de Busca de CST" class="screenshot" style="width: 910px !important; max-width: 910px !important; display: block; margin: 15px auto;">
+                <img src="https://i.imgur.com/BNmK86g.png" alt="Tela de Busca de CST" class="screenshot" style="width: 700px !important; max-width: 700px !important; display: block; margin: 15px auto;">
+            </div>
             </div>
 
             <div class="section">
                 <h2>Emissão de Notas Fiscais</h2>
                 <p>No momento da emissão da Nota Fiscal, ao adicionar o item na nota, o sistema preencherá os dados automaticamente.</p>
                 
-                <img src="https://i.imgur.com/VP2ElYN.png" alt="Tela de Nota Fiscal" class="screenshot" style="width: 910px !important; max-width: 910px !important; display: block; margin: 15px auto;">
+                <img src="https://i.imgur.com/VP2ElYN.png" alt="Tela de Nota Fiscal" class="screenshot" style="width: 700px !important; max-width: 700px !important; display: block; margin: 15px auto;">
 
                 <div class="alert">
                     <span class="alert-icon"></span>
