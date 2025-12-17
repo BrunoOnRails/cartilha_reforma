@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartilha - Reforma Tributária</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 0;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0;
+            background: white;
+            border-radius: 0;
+            box-shadow: none;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2b7cff 0%, #1a5fd9 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 280px;
+            height: auto;
+            margin-bottom: 20px;
+            
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 30px 40px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 5px solid #2b7cff;
+            page-break-inside: avoid;
+        }
+        
+        .section h2 {
+            color: #2b7cff;
+            margin-bottom: 12px;
+            font-size: 1.4em;
+        }
+        
+        .section p, .section li {
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
+        .section ul, .section ol {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        
+        .destaque {
+            background: linear-gradient(135deg, #d4f4ff 0%, #b3e0ff 100%);
+            padding: 20px 30px; 
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 5px solid #2b7cff;
+            page-break-inside: avoid;
+        }
+        
+        .destaque h3 {
+            color: #1a5fd9;
+            margin-bottom: 8px;
+            font-size: 1.15em;
+        }
+        
+        .destaque p {
+            margin-left: 0;
+        }
+        
+        .destaque ul {
+            margin-left: 0;
+            padding-left: 20px;
+        }
+        
+        .alert {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .alert-icon {
+            display: inline-block;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-right: 8px;
+        }
+        
+        .steps {
+            background: white;
+            padding: 15px 0;
+            margin: 15px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: start;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            transition: transform 0.2s;
+            border-left: 3px solid #02f6ff;
+            page-break-inside: avoid;
+        }
+        
+        .step:hover {
+            transform: translateX(5px);
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #02f6ff 0%, #2b7cff 100%);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-content strong {
+            font-size: 1em;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .step-content p {
+            font-size: 0.9em;
+        }
+        
+        .footer {
+            background: #2b7cff;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        .exemplo {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 5px solid #2196f3;
+        }
+        
+        .exemplo-title {
+            font-weight: bold;
+            color: #1976d2;
+            margin-bottom: 8px;
+        }
+
+        .screenshot {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin: 15px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://i.imgur.com/Dv7j5H7.png" class="logo" alt="Ability Tecnologia">
+            <h1>Cartilha de Atualização</h1>
+            <p>Reforma Tributária - CBS/IBS</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>O que é a Reforma Tributária?</h2>
+                <p>A Reforma Tributária brasileira visa simplificar a tributação sobre o consumo, unificando diversos impostos em dois novos tributos:</p>
+                <ul>
+                    <li><strong>CBS (Contribuição sobre Bens e Serviços):</strong> Substitui PIS, COFINS e IPI no âmbito federal</li>
+                    <li><strong>IBS (Imposto sobre Bens e Serviços):</strong> Substitui ICMS e ISS no âmbito estadual e municipal</li>
+                </ul>
+                
+                <p style="margin-top: 20px;"><strong>Transição Gradual:</strong></p>
+                <p>A implementação da reforma será <strong>gradual</strong>. A cada ano, as alíquotas dos novos impostos (CBS e IBS) aumentarão enquanto as alíquotas dos impostos antigos (PIS, COFINS, IPI, ICMS e ISS) diminuirão proporcionalmente, até que restem apenas o CBS e o IBS.</p>
+                
+                <p style="margin-top: 15px;"><strong>Ano de 2026 - Período de Teste:</strong></p>
+                <p>Durante todo o ano de 2026, as alíquotas serão aplicadas em caráter de <strong>teste</strong>. As alíquotas previstas para este período são:</p>
+                <ul>
+                    <li><strong>CBS:</strong> 0,9%</li>
+                    <li><strong>IBS:</strong> 0,1%</li>
+                </ul>
+                <p>Neste período de teste, os impostos antigos continuarão sendo cobrados normalmente. <strong>IMPORTANTE:</strong> Os novos impostos (CBS e IBS) serão <strong>apenas informativos</strong> durante 2026, ou seja, <strong>nada será efetivamente cobrado</strong> do cliente referente a esses tributos neste primeiro ano. Eles aparecerão nos documentos fiscais apenas para fins de adaptação e testes dos sistemas.</p>
+            </div>
+
+            <div class="destaque">
+                <h3>Configuração Padrão na Atualização</h3>
+                <p>Ao receber esta atualização, o sistema irá configurar automaticamente <strong>TODOS</strong> os produtos, inicialmente, como:</p>
+                <ul>
+                    <li><strong>CST:</strong> 000 (Tributação integral)</li>
+                    <li><strong>CClassTrib:</strong> 000001 (Tributação integral pelo IBS e CBS)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Como o Sistema Define a Tributação?</h2>
+                <p>O sistema utiliza uma <strong>ordem de prioridade</strong> inteligente para preencher as informações da reforma nas notas fiscais:</p>
+                
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Cadastro do Produto (Prioridade Máxima)</strong>
+                            <p>O sistema verifica primeiro se você definiu um CST e CClassTrib específicos dentro do cadastro do material (aba Informações Fiscais).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Tabela Interna por NCM</strong>
+                            <p>Caso o cadastro do produto esteja em branco, o sistema tentará buscar o NCM do produto e cruzá-lo com nossa tabela interna de tributação. Se encontrar uma correspondência única, usará esses dados.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Preenchimento Manual</strong>
+                            <p>Se não houver dados no produto e o NCM não for encontrado na tabela (ou houver 2 registros encontrados), os campos virão em branco para que você preencha manualmente e evite erro na emissão da nota.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Alterando o Cadastro dos Materiais</h2>
+                <p>Para produtos que <strong>não são tributados integralmente</strong> (como Isentos ou Alíquota Reduzida), você deve ajustar o cadastro manualmente.</p>
+                
+                <p>Veja abaixo a tela de cadastro:</p>
+                <img src="imagem_2025-12-17_091416431.png" alt="Tela de Cadastro de Materiais" class="screenshot" style="width: 910px !important; max-width: 910px !important; display: block; margin: 15px auto;">
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Adicionar Novo Registro</strong>
+                            <p>Clique no ícone de "folha em branco" para inserir uma nova regra fiscal para este produto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Excluir Registro</strong>
+                            <p>Utilize o "X" vermelho caso queira remover uma regra existente.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Buscar CST/CClassTrib</strong>
+                            <p>Ao clicar na <strong>lupa</strong>, o sistema abrirá a lista completa de situações tributárias disponíveis.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Preenchimento Manual</strong>
+                            <p>Você também pode digitar os dados diretamente no campo. O sistema validará automaticamente se o código informado existe. Caso o campo esteja vazio e você pressione <strong>Enter</strong> ou <strong>Tab</strong>, o sistema abrirá a mesma tela de busca do item 3.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Ao clicar na lupa (item 3), você verá a tela abaixo. Basta localizar a situação desejada e dar dois cliques (ou pressionar Enter):</p>
+                <img src="imagem_2025-12-17_091433510.png" alt="Tela de Busca de CST" class="screenshot" style="width: 910px !important; max-width: 910px !important; display: block; margin: 15px auto;">
+            </div>
+
+            <div class="section">
+                <h2>Emissão de Notas Fiscais</h2>
+                <p>No momento da emissão da Nota Fiscal, ao adicionar o item na nota, o sistema preencherá os dados automaticamente.</p>
+                
+                <img src="imagem_2025-12-17_094302176.png" alt="Tela de Nota Fiscal" class="screenshot" style="width: 910px !important; max-width: 910px !important; display: block; margin: 15px auto;">
+
+                <div class="alert">
+                    <span class="alert-icon"></span>
+                    <strong>COMO FUNCIONA NA PRÁTICA:</strong>
+                </div>
+                <ul>
+                    <li><strong>Campos Editáveis:</strong> Apenas o <strong>CST</strong> e o <strong>CClassTrib</strong> podem ser alterados nesta tela.</li>
+                    <li><strong>Cálculo Automático:</strong> Ao definir o CST, o sistema cruza as informações com a tabela interna (baseada no NCM e regras vigentes) para preencher automaticamente as <strong>Alíquotas, Reduções e Valores</strong>. Estes campos de cálculo permanecem travados para garantir a integridade fiscal.</li>
+                </ul>
+            </div>
+
+            <div class="destaque">
+                <h3>Resumo das Ações</h3>
+                <ul>
+                    <li><strong>Passo 1:</strong> Revise seus produtos. Se for tributado integralmente (CST 000), não precisa fazer nada.</li>
+                    <li><strong>Passo 2:</strong> Para produtos com tributação diferenciada, acesse o cadastro e altere o CST/CClassTrib.</li>
+                    <li><strong>Passo 3:</strong> Mantenha o NCM dos produtos sempre correto, pois ele é a base para o sistema calcular as alíquotas automaticamente.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Precisa de Ajuda?</h2>
+                <p>Nossa equipe está pronta para auxiliar você nesta transição:</p>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" style="margin-right: 10px;">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        <strong>WhatsApp:</strong> <a href="https://wa.me/553732321127" target="_blank" style="color: #2b7cff; text-decoration: none; margin-left: 5px;">+55 37 3232-1127</a>
+                    </li>
+                    <li style="display: flex; align-items: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#2b7cff" style="margin-right: 10px;">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                        </svg>
+                        <strong>Telefone:</strong> <span style="margin-left: 5px;">(37) 3232-1127</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Ability Tecnologia</strong></p>
+            <p>Tecnologia a seu favor</p>
+            <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">© 2025 - Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+</html>
